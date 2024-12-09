@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Mute Buttons</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttons">
+            
+            <h1>Select a Button</h1>
+
+            <button type="button" class="mute-btn" onclick="showResult('MEGA MUTE')">MEGA MUTE</button>
+            <button type="button" class="mute-btn" onclick="showResult('Mute')">Mute</button>
+            <button type="button" class="mute-btn" onclick="showResult('Delete')">Delete</button>
+            <button type="button" class="mute-btn" onclick="showResult('Pause')">Pause</button>
+            <button type="button" class="mute-btn" onclick="showResult('I Have a Question')">I Have a Question</button>
+            <button type="button" class="mute-btn" onclick="showResult('Me Me Me')">Me Me Me</button>
+            <button type="button" class="mute-btn" onclick="showResult('Zip It')">Zip It</button>
+            <button type="button" class="mute-btn" onclick="showResult('Cement It')">Cement It</button>
+            <button type="button" class="mute-btn" onclick="showResult('Shut It')">Shut It</button>
+            <button type="button" class="mute-btn" onclick="showResult('No One Cares')">No One Cares</button>
+        </div>
+
+        <div class="result-container">
+            <div class="result-label">Result:</div>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function showResult(resultText) {
+            // Set the result to the resultText when a button is clicked
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+    </script>
+</body>
+
+</html>
